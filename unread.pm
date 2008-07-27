@@ -5,7 +5,7 @@ use strict;
 
 use XSLoader;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 XSLoader::load(__PACKAGE__, $VERSION);
 
@@ -18,7 +18,7 @@ IO::Handle::unread - Pushes string back into input filehandle
 
 =head1 VERSION
 
-This document describes IO::Handle::unread version 0.01
+This document describes IO::Handle::unread version 0.02
 
 =head1 SYNOPSIS
 
@@ -29,8 +29,11 @@ This document describes IO::Handle::unread version 0.01
 
 =head1 DESCRIPTION
 
-This module provdes C<IO::Handle> class with C<unread()>,
+This module provides C<IO::Handle> class with C<unread()>,
 a superset of stdio's C<ungetc()>.
+
+B<Since the unread() routines of some layers are unstable,
+do not use this module for anything serious. There is NO WARRANTY.>
 
 =head1 INTERFACE 
 
@@ -77,7 +80,7 @@ L<perliol>.
 
 Goro Fuji E<lt>gfuji(at)cpan.orgE<gt>.
 
-=head1 LICENCE AND COPYRIGHT
+=head1 LICENSE AND COPYRIGHT
 
 Copyright (c) 2008, Goro Fuji E<lt>gfuji(at)cpan.orgE<gt>. Some rights reserved.
 

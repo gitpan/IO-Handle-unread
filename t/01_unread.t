@@ -7,6 +7,8 @@ use IO::Handle::unread;
 
 use File::Spec;
 
+use open IO => ':perlio';
+
 ok open(my $null, '<', File::Spec->devnull), 'open';
 
 is $null->unread("foo\n"), length("foo\n"), 'unread count';

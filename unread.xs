@@ -12,6 +12,8 @@
 
 MODULE = IO::Handle::unread	PACKAGE = IO::Handle
 
+PROTOTYPES: DISABLE
+
 IV
 unread(filehandle, string, length = undef)
 	SV* filehandle
